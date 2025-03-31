@@ -63,3 +63,18 @@ Tiempo promedio de retorno: 6
 Duracion total de la ejecucion: 8
 --------------------------------------------------------------------------------
 ```
+**Limitaciones en Algoritmos Expropiativos**  
+
+Los algoritmos **Round Robin** y **Realimentación (Multilevel Feedback Queue)** tienen fallas conocidas:  
+
+- **Round Robin**:  
+  - El manejo del *quantum* no es óptimo (puede forzar cambios de contexto innecesarios).  
+  - El diagrama de Gantt no muestra claramente los cambios de proceso.  
+
+- **Realimentación (MLFQ)**:  
+  - El sistema de prioridades no escala bien con muchos procesos.  
+  - No evita la **inanición** (procesos largos pueden quedarse sin ejecutar).  
+
+**Recomendación:**  
+- Usa los algoritmos **no expropiativos** (FCFS, SPN, etc.) para resultados más precisos.  
+- Los resultados de los expropiativos son aproximados y serán mejorados en futuras versiones.  
